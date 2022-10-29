@@ -5,3 +5,5 @@
 <img width="1021" alt="Screenshot 2022-10-29 at 2 35 29 PM" src="https://user-images.githubusercontent.com/43684440/198826373-23495fcb-2856-4cab-9087-dbd2a2c13922.png">
 <img width="1016" alt="Screenshot 2022-10-29 at 2 34 20 PM" src="https://user-images.githubusercontent.com/43684440/198826375-5b681e7c-c5c4-4d73-a94f-97deb4a67f60.png">
 <img width="999" alt="Screenshot 2022-10-29 at 2 33 56 PM" src="https://user-images.githubusercontent.com/43684440/198826376-c518e861-439b-43c9-88d7-6893ac25b456.png">
+
+Required to create 3 Custom Labels for URL, AuthId and AuthToken
