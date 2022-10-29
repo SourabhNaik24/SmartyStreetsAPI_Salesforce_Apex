@@ -47,7 +47,9 @@ public class SmartyStreetApi_Test {
             
             HttpResponse res = SmartyStreetsApiCallOut.getInfoFromExternalService('142 Park Rd','Pittsford','NY','14534','10','invalid');
             
+            Test.startTest();
             SmartyStreetApi.updateEventCheckBox(even);
+            Test.stopTest();
             //SmartyStreetApi.verifyAddress(even[0].Id, even[0].Street__c, even[0].City__c, even[0].State__c, even[0].Zip_Code__c, String.ValueOf(even[0].Canditate__c), even[0].Match__c);
         }
         catch(Exception exp) {
