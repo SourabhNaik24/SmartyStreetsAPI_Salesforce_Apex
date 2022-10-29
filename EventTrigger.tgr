@@ -1,0 +1,14 @@
+/*-------------------------------------------------------------------------------------------
+Name:       EventTrigger.tgr
+Purpose:    An Apex Trigger on Event__c Object to Perform Custom Logic
+------------------------------History--------------------------------------------------------
+Version     Author                Date                 Detail Description 
+-------     ---------------       --------------       ------------------
+1.0         Sourabh Naik          29th Oct 2022        Initial Development 
+--------------------------------------------------------------------------------------------*/
+trigger EventTrigger on Event__c (after update) {
+    if(trigger.isAfter && trigger.isUpdate) {
+        if(system.isFuture()) return;
+        SmartyStreetApi.updateEventCheckBox(trigger.new);
+    }
+}
