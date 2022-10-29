@@ -7,3 +7,5 @@
 <img width="999" alt="Screenshot 2022-10-29 at 2 33 56 PM" src="https://user-images.githubusercontent.com/43684440/198826376-c518e861-439b-43c9-88d7-6893ac25b456.png">
 
 Required to create 3 Custom Labels for URL, AuthId and AuthToken
+
+URL: https://us-street.api.smartystreets.com/street-address
