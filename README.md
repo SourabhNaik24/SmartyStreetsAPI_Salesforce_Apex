@@ -12,6 +12,13 @@
 <img width="1016" alt="Screenshot 2022-10-29 at 2 34 20 PM" src="https://user-images.githubusercontent.com/43684440/198826375-5b681e7c-c5c4-4d73-a94f-97deb4a67f60.png">
 <img width="999" alt="Screenshot 2022-10-29 at 2 33 56 PM" src="https://user-images.githubusercontent.com/43684440/198826376-c518e861-439b-43c9-88d7-6893ac25b456.png">
 
-****Note:**** Required to create 3 Custom Labels for URL, AuthId and AuthToken
+****Note 1:**** Required to create 3 Custom Labels for URL, AuthId and AuthToken
 
 **URL:** https://us-street.api.smartystreets.com/street-address
+
+****Note 2:**** 
+1) SmartyStreetApi - Code Coverage is 75%
+2) SmartyStreetsJSON - Code Coverage is 100%
+3) SmartyStreetsApiCallOut - Code Coverage is 100%
+
+****************************************************************************************************************************************************
