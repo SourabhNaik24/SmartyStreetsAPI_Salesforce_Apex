@@ -1,5 +1,9 @@
 # SmartyStreetsAPI_Salesforce_Apex
 
+Requirement – The business ask is to verify the address of the event. Use the SmartyStreets API to verify the address & update “Location Verified” field on Event.
+
+Must Have – Use of Error Handling and code re-usability
+
 <img width="1340" alt="Screenshot 2022-10-29 at 3 18 29 PM" src="https://user-images.githubusercontent.com/43684440/198826370-d1b90ba6-a79f-401d-9967-c03fee50e710.png">
 <img width="590" alt="Screenshot 2022-10-29 at 2 36 31 PM" src="https://user-images.githubusercontent.com/43684440/198826372-a07b392b-116e-4bbc-aef3-5db5344089b4.png">
 <img width="1021" alt="Screenshot 2022-10-29 at 2 35 29 PM" src="https://user-images.githubusercontent.com/43684440/198826373-23495fcb-2856-4cab-9087-dbd2a2c13922.png">
