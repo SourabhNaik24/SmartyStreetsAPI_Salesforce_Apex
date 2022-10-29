@@ -29,21 +29,20 @@ public class SmartyStreetApi {
 			Request.setHeader('Accept','application/json');
         	HttpResponse Response = Http.send(Request);
         
-        	Event__c[] even = [SELECT Id, Location_Verified__c FROM Event__c WHERE Id =:eveID LIMIT 1];
+        	Event__c even = new Event__c();
+            	even.Id = eveID;
         
         	if(Response.getStatusCode()!=200){
-            	system.debug(Response.getBody()+' + '+Response.getStatusCode());
-            	if(even.size() >= 1) {
-                	even[0].Error_Description__c = 'Error Code is '+Response.getStatusCode();
-                    update even[0];
+            		system.debug(Response.getBody()+' + '+Response.getStatusCode());
+                	even.Error_Description__c = 'Error Code is '+Response.getStatusCode();
+                	update even;
             	}     
-        	}
         
         	if(Response.getStatusCode()==200){
             	//system.debug('Response: ' + Response.getBody());
             	List<SmartyStreetsJSON> results = SmartyStreetsJSON.parse(Response.getBody());
             	system.debug('Response: ' + results);
-            	if(even.size() >= 1) {
+            	
                     if(results.size() > 0) {
                         String address = results[0].Components.primary_number+'%20'+results[0].Components.street_name+'%20'+results[0].Components.street_suffix;
                         String Cityz = results[0].Components.city_name;
@@ -52,9 +51,9 @@ public class SmartyStreetApi {
                         System.debug('A: '+address+' C: '+Cityz+' S: '+Statez+' Z: '+Zip);
                         System.debug('A: '+street+' C: '+city+' S: '+state+' Z: '+zipcode);
                         if(address == street && Cityz == city && Statez == state && Zip == zipcode) {
-                        	even[0].Location_Verified__c = true;
-                			even[0].Error_Description__c = ' ';
-            				update even[0];
+                        	even.Location_Verified__c = true;
+                			even.Error_Description__c = ' ';
+            				update even;
                             return;
                         }
                         if((address != street || Cityz != city || Statez != state || Zip != zipcode) || 
@@ -62,12 +61,11 @@ public class SmartyStreetApi {
                            (Cityz != city && (street == NULL || state == NULL || zipcode == NULL)) ||
                            (Statez != state && (street == NULL || city == NULL || zipcode == NULL)) ||
                            (Zip != zipcode && (street == NULL || city == NULL || state == NULL)) ) {
-                    		even[0].Error_Description__c = 'Not Proper Address Data Entered';
-                            even[0].Location_Verified__c = false;
-                        	update even[0];
+                    		even.Error_Description__c = 'Not Proper Address Data Entered';
+                            even.Location_Verified__c = false;
+                        	update even;
                 		}
                     }
-            	} 
         	}
         }
         catch(ListException lstExp) {
